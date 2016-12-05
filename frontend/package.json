@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "~2.2.1",
     "@angular/router": "~3.2.0",
     "@angular/upgrade": "~2.2.1",
-    "angular-jwt": "^0.1.8",
     "angular2-jwt": "^0.1.25",
     "core-js": "^2.4.1",
     "es6-promise": "^4.0.5",
