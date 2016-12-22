@@ -14,6 +14,6 @@ class Page extends Model
      */
 
     protected $fillable = [
-        'name', 'content', 'media', 'slug', 'posted_by', 'updated_by', 'user_id'
+        'name', 'content', 'media', 'slug', 'updated_by', 'user_id'
     ];
 }

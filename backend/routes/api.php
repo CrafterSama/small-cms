@@ -40,5 +40,7 @@ $api->version('v1', function (Router $api) {
     $api->group(['middleware' => 'api.auth'], function ($api) {
         /** Para Acceder al Dashboard de las Paginas */
         $api->resource('pages', 'App\Api\V1\Controllers\PageController');
+        /** Para Acceder al Dashboard de los Posts */
+        $api->resource('posts', 'App\Api\V1\Controllers\PostController');
     });
 });
