@@ -1,5 +1,6 @@
 <?php
 
+use App\Role;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Role::create(array('name' => 'Administrator'));
+        Role::create(array('name' => 'Supervisor'));
+        Role::create(array('name' => 'User'));
     }
 }

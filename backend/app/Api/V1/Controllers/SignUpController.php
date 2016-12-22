@@ -13,7 +13,19 @@ class SignUpController extends Controller
 {
     public function signUp(LoginRequest $request, JWTAuth $JWTAuth)
     {
-        $user = new User($request->all());
+        // $user = new User($request->all());
+
+        $user = new User;
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
+
+        if(\App\User::all()->count() == 0):
+            $user->role_id = '1';
+        else:
+            $user->role_id = '3';
+        endif;
+
         if(!$user->save()) {
             throw new HttpException(500);
         }
