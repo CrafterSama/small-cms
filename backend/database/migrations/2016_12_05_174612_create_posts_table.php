@@ -1,4 +1,4 @@
-    
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->longText('content');
             $table->string('slug');
             $table->string('media');
-            $table->integer('posted_by');
+            $table->integer('user_id');
             $table->integer('updated_by');
             $table->timestamps();
             $table->softDeletes();
