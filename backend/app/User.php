@@ -38,4 +38,9 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = Hash::make($value);
     }
+
+    public function pages()
+    {
+        return $this->hasMany('App\Page');
+    }
 }

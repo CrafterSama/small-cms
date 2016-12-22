@@ -36,4 +36,9 @@ $api->version('v1', function (Router $api) {
             'message' => 'This is a simple example of item returned by your APIs. Everyone can see it.'
         ]);
     });
+
+    $api->group(['middleware' => 'api.auth'], function ($api) {
+        /** Para Acceder al Dashboard de las Paginas */
+        $api->resource('pages', 'App\Api\V1\Controllers\PageController');
+    });
 });
