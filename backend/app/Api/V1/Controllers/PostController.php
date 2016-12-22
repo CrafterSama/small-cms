@@ -39,7 +39,10 @@ class PostController extends Controller
         $post->media = $request->get('media');
         $post->slug = str_slug($request->get('title'));
         if($this->currentUser()->posts()->save($post))
-            return $this->response->created();
+            // return $this->response->created();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_create_post', 500);
     }
@@ -51,7 +54,10 @@ class PostController extends Controller
             throw new NotFoundHttpException;
         $post->fill($request->all());
         if($post->save())
-            return $this->response->noContent();
+            // return $this->response->noContent();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_update_post', 500);
     }
@@ -62,12 +68,15 @@ class PostController extends Controller
         if(!$post)
             throw new NotFoundHttpException;
         if($post->delete())
-            return $this->response->noContent();
+            // return $this->response->noContent();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_delete_post', 500);
     }
 
     private function currentUser() {
         return JWTAuth::parseToken()->authenticate();
-    }    //
+    }
 }

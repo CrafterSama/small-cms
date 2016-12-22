@@ -38,7 +38,10 @@ class PageController extends Controller
         $page->media = $request->get('media');
         $page->slug = str_slug($request->get('name'));
         if($this->currentUser()->pages()->save($page))
-            return $this->response->created();
+            // return $this->response->created();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_create_page', 500);
     }
@@ -50,7 +53,10 @@ class PageController extends Controller
             throw new NotFoundHttpException;
         $page->fill($request->all());
         if($page->save())
-            return $this->response->noContent();
+            // return $this->response->noContent();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_update_page', 500);
     }
@@ -61,7 +67,10 @@ class PageController extends Controller
         if(!$page)
             throw new NotFoundHttpException;
         if($page->delete())
-            return $this->response->noContent();
+            // return $this->response->noContent();
+            return response()->json([
+                'status' => 'ok'
+            ], 201);
         else
             return $this->response->error('could_not_delete_page', 500);
     }
