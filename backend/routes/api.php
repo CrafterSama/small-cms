@@ -42,5 +42,7 @@ $api->version('v1', function (Router $api) {
         $api->resource('pages', 'App\Api\V1\Controllers\PageController');
         /** Para Acceder al Dashboard de los Posts */
         $api->resource('posts', 'App\Api\V1\Controllers\PostController');
+        /** Para Acceder al Dashboard de los Usuarios */
+        $api->resource('users', 'App\Api\V1\Controllers\UserController');
     });
 });
