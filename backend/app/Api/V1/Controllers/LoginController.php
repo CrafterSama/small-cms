@@ -17,6 +17,7 @@ class LoginController extends Controller
 
         try {
             $token = $JWTAuth->attempt($credentials);
+            $currentUser = \Auth::user();
 
             if(!$token) {
                 throw new AccessDeniedHttpException();
@@ -29,6 +30,7 @@ class LoginController extends Controller
         return response()
             ->json([
                 'status' => 'ok',
+                'user' => $currentUser,
                 'token' => $token
             ]);
     }

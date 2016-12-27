@@ -45,4 +45,5 @@ $api->version('v1', function (Router $api) {
         /** Para Acceder al Dashboard de los Usuarios */
         $api->resource('users', 'App\Api\V1\Controllers\UserController');
     });
+
 });
