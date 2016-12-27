@@ -14,7 +14,7 @@ $api->version('v1', function (Router $api) {
         $api->post('reset', 'App\\Api\\V1\\Controllers\\ResetPasswordController@resetPassword');
     });
 
-    $api->group(['middleware' => 'jwt.auth'], function(Router $api) {
+    $api->group(['middleware' => 'jwt.auth', 'cors'], function(Router $api) {
         $api->get('protected', function() {
             return response()->json([
                 'message' => 'Access to this item is only for authenticated user. Provide a token in your request!'
@@ -37,7 +37,7 @@ $api->version('v1', function (Router $api) {
         ]);
     });
 
-    $api->group(['middleware' => 'api.auth'], function ($api) {
+    $api->group(['middleware' => 'api.auth', 'cors'], function ($api) {
         /** Para Acceder al Dashboard de las Paginas */
         $api->resource('pages', 'App\Api\V1\Controllers\PageController');
         /** Para Acceder al Dashboard de los Posts */
