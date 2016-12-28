@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material-92cbf503';
+import { MaterialModule } from '@angular/material';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/index';
@@ -21,6 +21,7 @@ import { RegisterComponent } from './register/index';
 
 @NgModule({
     imports: [
+        MaterialModule.forRoot(),
         BrowserModule,
         FormsModule,
         HttpModule,
@@ -48,3 +49,4 @@ import { RegisterComponent } from './register/index';
 })
 
 export class AppModule { }
+export class PizzaPartyAppModule { }

@@ -44,6 +44,8 @@ $api->version('v1', function (Router $api) {
         $api->resource('posts', 'App\Api\V1\Controllers\PostController');
         /** Para Acceder al Dashboard de los Usuarios */
         $api->resource('users', 'App\Api\V1\Controllers\UserController');
+
+        $api->delete('users/{user}', 'App\Api\V1\Controllers\UserController@destroy');
     });
 
 });

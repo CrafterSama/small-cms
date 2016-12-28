@@ -7,6 +7,10 @@ import { User } from '../_models/index';
 export class UserService {
     constructor(private http: Http) { }
 
+    refresh() {
+        return this.http.get('http://localhost:8000/api/refresh', this.jwt()).map((response: Response) => response.json());
+    }
+
     getAll() {
         return this.http.get('http://localhost:8000/api/users', this.jwt()).map((response: Response) => response.json());
     }
@@ -20,7 +24,7 @@ export class UserService {
     }
 
     update(user: User) {
-        return this.http.put('http://localhost:8000/api/users/' + user.id, user, this.jwt()).map((response: Response) => response.json());
+        return this.http.put('http://localhost:8000/api/users/', user, this.jwt()).map((response: Response) => response.json());
     }
 
     delete(id: number) {
@@ -28,12 +32,13 @@ export class UserService {
     }
 
     // private helper methods
-
     private jwt() {
         // create authorization header with jwt token
         let currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (currentUser && currentUser.token) {
+            //console.log(currentUser.token);
             let headers = new Headers({ 'Authorization': 'Bearer ' + currentUser.token });
+            //console.log(headers);
             return new RequestOptions({ headers: headers });
         }
     }
