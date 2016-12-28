@@ -9,3 +9,7 @@
 "Para los modelos se utilizaron nombres estandares en Singular con la primera letra en Capital. Ejemplo: User"
 # BaseLaravel
 Base de desarrollo de Laravel con autenticacion de usuarios
+
+# Angular 2
+
+Se agrego Angular 2 Material al Desarrollo del Frontend
