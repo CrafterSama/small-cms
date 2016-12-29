@@ -1,17 +1,11 @@
 ﻿<md-toolbar color="primary"><span>Hi {{currentUser.user.name}}!</span><span class="spacer"></span> <a [routerLink]="['/login']" md-raised-button color="accent">Logout</a></md-toolbar>
-<md-card class="example-card">
+<h3 md-subheader>Posts</h3>
+<md-card class="card-posts" *ngFor="let post of posts">
     <md-card-header>
-        <h3 md-subheader>Users</h3>
+        <h2>{{post.title}}</h2>
     </md-card-header>
     <md-card-content>
-        <md-list>
-            <md-list-item *ngFor="let user of users">
-                <span>{{user.name}} ({{user.email}})</span>
-                <span class="spacer"></span>
-                <a (click)="deleteUser(user.id)" md-mini-fab color="warn"><i class="material-icons">remove</i></a>
-                <md-divider></md-divider>
-            </md-list-item>
-        </md-list>
+        <p>{{post.content}}</p>
     </md-card-content>
     <md-card-actions>
     </md-card-actions>

@@ -2,7 +2,9 @@
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AlertService, AuthenticationService } from '../_services/index';
+import { Post } from '../_models/index';
 import { User } from '../_models/index';
+import { PostService } from '../_services/index';
 import { UserService } from '../_services/index';
 
 
@@ -13,9 +15,11 @@ import { UserService } from '../_services/index';
 
 export class HomeComponent implements OnInit {
     currentUser: User;
+    posts: Post[] = [];
     users: User[] = [];
 
     constructor(
+        private postService: PostService,
         private userService: UserService,
         private route: ActivatedRoute,
         private router: Router,
@@ -26,7 +30,11 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.loadAllPosts();
+    }
 
+    private loadAllPosts() {
+        this.postService.getAll().subscribe(posts => { this.posts = posts; });
     }
 
 }
