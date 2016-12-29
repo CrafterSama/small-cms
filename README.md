@@ -17,3 +17,5 @@ Se agrego Angular 2 Material al Desarrollo del Frontend
 Lista Autentificacion de Usuarios
 
 Se agrego "Angular 2 Google Maps" -> npm install angular2-google-maps
+
+Se agrego la parte de los Posts para sistema de blog
