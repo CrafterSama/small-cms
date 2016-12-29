@@ -15,3 +15,5 @@ Base de desarrollo de Laravel con autenticacion de usuarios
 Se agrego Angular 2 Material al Desarrollo del Frontend
 
 Lista Autentificacion de Usuarios
+
+Se agrego "Angular 2 Google Maps" -> npm install angular2-google-maps
