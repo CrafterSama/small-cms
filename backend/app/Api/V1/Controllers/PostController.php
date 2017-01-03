@@ -14,18 +14,15 @@ class PostController extends Controller
 {
 	use Helpers;
 
-	public function index()	{
-	    $currentUser = JWTAuth::parseToken()->authenticate();
-	    return $currentUser
-	        ->posts()
-	        ->orderBy('created_at', 'DESC')
-	        ->get()
-	        ->toArray();
+    public function index() {
+        //$currentUser = JWTAuth::parseToken()->authenticate();
+        $posts = \App\Post::orderBy('created_at', 'DESC')->get()->toArray();
+	    return $posts;
 	}
 
 	public function show($id)
     {
-        $post = $this->currentUser()->posts()->find($id);
+        $post = \App\Post::find($id);
         if(!$post)
             throw new NotFoundHttpException;
         return $post;

@@ -4,8 +4,8 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
-import { MockBackend, MockConnection } from '@angular/http/testing';
-import { BaseRequestOptions } from '@angular/http';
+//import { MockBackend, MockConnection } from '@angular/http/testing';
+//import { BaseRequestOptions } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
@@ -16,6 +16,7 @@ import { AlertService, AuthenticationService, UserService, PostService } from '.
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { DashboardComponent } from './dashboard/index';
 import { PostComponent } from './post/index';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PostComponent } from './post/index';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
+        DashboardComponent,
         PostComponent
     ],
     providers: [

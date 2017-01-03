@@ -1,12 +1,14 @@
 ﻿<md-sidenav-layout>
     <md-toolbar color="primary">
-        <div *ngIf="currentUser">
-            <span>Hi {{currentUser.user.name}}!</span><span class="spacer"></span> <a [routerLink]="['/login']" md-raised-button color="accent">Logout</a>
-        </div>
+
     </md-toolbar>
     <md-sidenav #sidenav>
 
     </md-sidenav>
+    <!-- Header -->
+    <header class="header">
+
+    </header>
 
     <!-- main app container -->
     <div class="container">
@@ -18,10 +20,7 @@
     <footer>
         <div class="text-center">
             <p>
-                SoftArs CMS
-            </p>
-            <p>
-                <a href="http://softars.com" target="_top">SoftArs, Inc.</a>
+                SoftArs CMS - Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a> - {{ currentDate.getFullYear() }}
             </p>
         </div>
     </footer>

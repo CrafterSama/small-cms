@@ -12,11 +12,11 @@ export class PostService {
     }
 
     getAll() {
-        return this.http.get('http://localhost:8000/api/posts', this.jwt()).map((response: Response) => response.json());
+        return this.http.get('http://localhost:8000/api/posts'/*, this.jwt()*/).map((response: Response) => response.json());
     }
 
     getById(id: number) {
-        return this.http.get('http://localhost:8000/api/posts/' + id, this.jwt()).map((response: Response) => response.json());
+        return this.http.get('http://localhost:8000/api/posts/' + id/*, this.jwt()*/).map((response: Response) => response.json());
     }
 
     create(post: Post) {

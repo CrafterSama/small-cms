@@ -31,12 +31,6 @@ export class PostComponent implements OnInit {
 
     ngOnInit() {
         this.loadAllPosts();
-        // reset login status
-
-        //this.authenticationService.logout();
-
-        // get return url from route parameters or default to '/'
-        //this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
     deletePost(id: number) {

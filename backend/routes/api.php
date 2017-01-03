@@ -37,15 +37,22 @@ $api->version('v1', function (Router $api) {
         ]);
     });
 
+    $api->group(['middleware' => 'cors'], function ($api) {
+        $api->get('posts', 'App\Api\V1\Controllers\PostController@index');
+        $api->get('posts/{id}', 'App\Api\V1\Controllers\PostController@show');
+    });
+
     $api->group(['middleware' => 'api.auth', 'cors'], function ($api) {
+
         /** Para Acceder al Dashboard de las Paginas */
         $api->resource('pages', 'App\Api\V1\Controllers\PageController');
-        /** Para Acceder al Dashboard de los Posts */
-        $api->resource('posts', 'App\Api\V1\Controllers\PostController');
-        /** Para Acceder al Dashboard de los Usuarios */
-        $api->resource('users', 'App\Api\V1\Controllers\UserController');
 
-        $api->delete('users/{user}', 'App\Api\V1\Controllers\UserController@destroy');
+        /** Para Acceder al Dashboard de los Posts */
+        $api->resource('posts', 'App\Api\V1\Controllers\PostController', ['except' => ['index', 'show']]);
+
+        /** Para Acceder al Dashboard de los Usuarios */
+        $api->resource('users', 'App\Api\V1\Controllers\UserController', ['except' => ['create']]);
     });
+
 
 });

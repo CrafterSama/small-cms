@@ -6,4 +6,8 @@
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent { }
+export class AppComponent {
+
+	currentDate = new Date();
+
+}

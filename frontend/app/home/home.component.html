@@ -1,6 +1,4 @@
-﻿<md-toolbar color="primary"><span>Hi {{currentUser.user.name}}!</span><span class="spacer"></span> <a [routerLink]="['/login']" md-raised-button color="accent">Logout</a></md-toolbar>
-<h3 md-subheader>Posts</h3>
-<md-card class="card-posts" *ngFor="let post of posts">
+﻿<md-card class="card-posts" *ngFor="let post of posts">
     <md-card-header>
         <h2>{{post.title}}</h2>
     </md-card-header>
