@@ -1,6 +1,5 @@
 # ---> Laravel
 /bootstrap/compiled.php
-/frontend
 .env.*.php
 .env.php
 .env
