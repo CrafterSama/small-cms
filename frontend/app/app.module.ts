@@ -17,6 +17,7 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
+import { AboutComponent } from './about/index';
 import { PostComponent } from './post/index';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { PostComponent } from './post/index';
         LoginComponent,
         RegisterComponent,
         DashboardComponent,
+        AboutComponent,
         PostComponent
     ],
     providers: [

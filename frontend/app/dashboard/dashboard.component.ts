@@ -12,4 +12,10 @@ import { UserService } from '../_services/index';
     templateUrl: 'dashboard.component.html'
 })
 
-export class DashboardComponent implements OnInit { }
+export class DashboardComponent implements OnInit {
+
+	ngOnInit() {
+
+    }
+
+}
