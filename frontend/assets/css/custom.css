@@ -767,21 +767,19 @@ md-toolbar.md-primary,
 [md-fab].md-primary,
 [md-mini-fab].md-primary,
 [md-raised-button].md-primary {
-    background-color: rgba(150, 150, 150, 0.15);
-    max-height: 60px
+    background-color: rgba(150, 150, 150, 1);
+    color: #fff;
 }
 
 md-toolbar {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: Roboto,"Helvetica Neue",sans-serif;
-    padding: 0 16px;
-    flex-direction: column;
     min-height: 35px !important;
+    font-size: 1.2em !important;
+    line-height: 1.2em !important;
+    padding: 16 16px !important;
 }
 
 md-toolbar-row {
-    height: 50px !important;
+    height: 35px !important;
 }
 
 [md-button],
@@ -790,4 +788,8 @@ md-toolbar-row {
 [md-mini-fab],
 [md-raised-button] {
     background-color: #ccc;
+}
+
+.toolbar-text {
+    margin-left: 10px;
 }
