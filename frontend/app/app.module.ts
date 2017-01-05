@@ -46,7 +46,7 @@ import { PostComponent } from './post/index';
         PostService
 
     ],
-    entryComponents: [ ModalContact ],
+    /*entryComponents: [ ModalContact ],*/
     bootstrap: [ AppComponent ]
 })
 
