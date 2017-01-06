@@ -1,45 +1,43 @@
 ﻿<md-sidenav-layout>
-    <!-- Header -->
-    <header class="header">
-        <md-toolbar color="primary">
-            <div class="container">
-                <md-toolbar-row>
-                    <span><i class="material-icons">mail_outline</i>info@softars.com</span>
-                    <span> <i class="material-icons">phone</i>+58 265 000 00 00</span>
-                    <span class="spacer"></span>
-                    <button md-raised-button color="primary">Contáctenos</button>
-                </md-toolbar-row>
-            </div>
-        </md-toolbar>
-        <div class="top-banner">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo" />
-                <h5 class="small">Empresa dedicada a la creación de Software as a Service y Videojuegos</h5>
-            </div>
-            <md-toolbar class="navbar">
-                <nav class="container">
-                    <span><a routerLink="" routerLinkActive="active">Inicio</a></span>
-                    <span><a routerLink="nosotros" routerLinkActive="active">Nosotros</a></span>
-                    <span><a routerLink="portafolio" routerLinkActive="active">Portafolio</a></span>
-                    <span><a routerLink="acerca-de" routerLinkActive="active">Acerca de</a></span>
-                    <span><a routerLink="contactanos" routerLinkActive="active">Contáctenos</a></span>
-                </nav>
-            </md-toolbar>
-        </div>
-    </header>
-
-    <!-- main app container -->
-    <div class="container">
-        <alert></alert>
-        <router-outlet></router-outlet>
-    </div>
-
-    <!-- credits -->
-    <footer>
-        <div class="container text-center">
-            <p>
-                SoftArs CMS - Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a> - {{ currentDate.getFullYear() }}
-            </p>
-        </div>
-    </footer>
+	<!-- Header -->
+	<header [hidden]="isHidden()" class="header">
+	    <md-toolbar color="primary">
+	        <div class="container">
+	            <md-toolbar-row>
+	                <span><i class="material-icons">mail_outline</i>info@softars.com</span>
+	                <span> <i class="material-icons">phone</i>+58 265 000 00 00</span>
+	                <span class="spacer"></span>
+	                <button md-raised-button color="primary">Contáctenos</button>
+	            </md-toolbar-row>
+	        </div>
+	    </md-toolbar>
+	    <div class="top-banner">
+	        <div class="logo">
+	            <img src="assets/images/logo.png" alt="Logo" />
+	            <h5 class="small">Empresa dedicada a la creación de Software as a Service y Videojuegos</h5>
+	        </div>
+	        <md-toolbar class="navbar">
+	            <nav class="container">
+	                <span><a routerLink="">Inicio</a></span>
+	                <span><a routerLink="nosotros">Nosotros</a></span>
+	                <span><a routerLink="portafolio">Portafolio</a></span>
+	                <span><a routerLink="acerca-de">Acerca de</a></span>
+	                <span><a routerLink="contactenos">Contáctenos</a></span>
+	            </nav>
+	        </md-toolbar>
+	    </div>
+	</header>
+	<!-- main app container -->
+	<div class="container">
+		<alert></alert>
+		<router-outlet></router-outlet>
+	</div>
+	<!-- credits -->
+	<footer [hidden]="isHidden()">
+	    <div class="container text-center">
+	        <p>
+	            SoftArs CMS - Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a> - {{ currentDate.getFullYear() }}
+	        </p>
+	    </div>
+	</footer>
 </md-sidenav-layout>

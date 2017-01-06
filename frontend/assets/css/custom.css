@@ -1464,6 +1464,10 @@ md-toolbar-row .container {
     flex: 1 1 auto;
 }
 
+.full-width {
+    width: 100%;
+}
+
 .loading {
     position: fixed;
     top: 0;
@@ -1559,6 +1563,11 @@ md-toolbar-row > div > md-toolbar-row > span {
     font-size: .8em;
 }
 md-toolbar-row > nav > span > a {
+    color: rgba(255,255,255,1);
+    font-size: .9em;
+}
+md-toolbar-row > nav > span > a:hover,
+md-toolbar-row > nav > span > a:focus {
     color: rgba(255,255,255,1);
 }
 md-toolbar-row > div > md-toolbar-row > span > i.material-icons {

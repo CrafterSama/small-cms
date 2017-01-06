@@ -5,18 +5,26 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { PostComponent } from './post/index';
 import { AboutComponent } from './about/index';
+import { ContactComponent } from './contact/index';
 import { DashboardComponent } from './dashboard/index';
 import { AuthGuard } from './_guards/index';
 
 const appRoutes: Routes = [
+
+	/** Normal sections */
     { path: '', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
     { path: 'acerca-de', component: AboutComponent },
-    { path: 'register', component: RegisterComponent },
+    { path: 'contactenos', component: ContactComponent },
+
+    /** Login and registration */
+    { path: 'login', component: LoginComponent },
+    { path: 'registro', component: RegisterComponent },
+
+    /** Login required sections */
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'dashboard/posts', component: PostComponent, canActivate: [AuthGuard] },
 
-    // otherwise redirect to home
+    /** Otherwise redirect to home */
     { path: '**', redirectTo: '' }
 ];
 

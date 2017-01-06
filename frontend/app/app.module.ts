@@ -18,7 +18,10 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
 import { AboutComponent } from './about/index';
+import { ContactComponent } from './contact/index';
 import { PostComponent } from './post/index';
+import { HeaderComponent } from './common/index';
+import { FooterComponent } from './common/index';
 
 @NgModule({
     imports: [
@@ -36,6 +39,9 @@ import { PostComponent } from './post/index';
         RegisterComponent,
         DashboardComponent,
         AboutComponent,
+        ContactComponent,
+        HeaderComponent,
+        FooterComponent,
         PostComponent
     ],
     providers: [
@@ -47,7 +53,8 @@ import { PostComponent } from './post/index';
 
     ],
     /*entryComponents: [ ModalContact ],*/
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
+    entryComponents: [HeaderComponent, FooterComponent ]
 })
 
 export class AppModule { }
