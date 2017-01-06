@@ -46,7 +46,8 @@ import { PostComponent } from './post/index';
         PostService
 
     ],
-    bootstrap: [AppComponent]
+    /*entryComponents: [ ModalContact ],*/
+    bootstrap: [ AppComponent ]
 })
 
 export class AppModule { }

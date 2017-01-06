@@ -2,13 +2,31 @@
     <!-- Header -->
     <header class="header">
         <md-toolbar color="primary">
-            <nav class="container">
-                <i class="material-icons">mail_outline</i><span class="toolbar-text">info@softars.com</span>
-            </nav>
+            <div class="container">
+                <md-toolbar-row>
+                    <span><i class="material-icons">mail_outline</i>info@softars.com</span>
+                    <span> <i class="material-icons">phone</i>+58 265 000 00 00</span>
+                    <span class="spacer"></span>
+                    <button md-raised-button color="primary">Contáctenos</button>
+                </md-toolbar-row>
+            </div>
         </md-toolbar>
-        <md-sidenav #sidenav>
-
-        </md-sidenav>
+        <div class="top-banner">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo" />
+                <h5 class="small">Empresa dedicada a la creación de Software as a Service y Videojuegos</h5>
+            </div>
+            <md-toolbar class="navbar">
+                <nav class="container">
+                    <span>Inicio</span>
+                    <span>Nosotros</span>
+                    <span>Portafolio</span>
+                    <span>Proyectos</span>
+                    <span>Acerca de</span>
+                    <span>Contáctenos</span>
+                </nav>
+            </md-toolbar>
+        </div>
     </header>
 
     <!-- main app container -->
@@ -19,7 +37,7 @@
 
     <!-- credits -->
     <footer>
-        <div class="text-center">
+        <div class="container text-center">
             <p>
                 SoftArs CMS - Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a> - {{ currentDate.getFullYear() }}
             </p>
