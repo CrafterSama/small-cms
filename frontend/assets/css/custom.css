@@ -286,7 +286,7 @@ textarea {
     line-height: inherit;
 }
 a {
-    color: #337ab7;
+    color: rgba(245, 134, 52, 1);
     text-decoration: none;
 }
 a:hover,
@@ -1534,7 +1534,7 @@ md-toolbar-row > nav > span {
     flex: 1 1 auto;
     text-align: center;
     color: #fff;
-    padding: 19px;
+    padding: 19px 18px 20px;
     transition: all ease .3s;
     border-bottom: 3px solid;
     cursor: pointer;
@@ -1557,6 +1557,9 @@ md-toolbar.navbar {
 }
 md-toolbar-row > div > md-toolbar-row > span {
     font-size: .8em;
+}
+md-toolbar-row > nav > span > a {
+    color: rgba(255,255,255,1);
 }
 md-toolbar-row > div > md-toolbar-row > span > i.material-icons {
     margin-right: 5px;
