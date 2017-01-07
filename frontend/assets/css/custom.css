@@ -255,7 +255,7 @@ th {
     }
 }
 * {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -730,7 +730,7 @@ address {
 }
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        width: 990px;
     }
 }
 .container-fluid {
@@ -1463,11 +1463,9 @@ md-toolbar-row .container {
 .spacer {
     flex: 1 1 auto;
 }
-
 .full-width {
     width: 100%;
 }
-
 .loading {
     position: fixed;
     top: 0;
@@ -1492,7 +1490,6 @@ md-toolbar-row .container {
 }
 
 .top-banner {
-    min-height: 200px;
     background-image: url(../images/header-bg.jpg);
     background-position: center;
 }
@@ -1510,7 +1507,7 @@ md-toolbar-row .container {
 .top-banner > .logo > img {
     color: #000;
     position: relative;
-    width: 25%;
+    width: 35%;
 }
 
 .logo > h5.small {
@@ -1538,14 +1535,10 @@ md-toolbar-row > nav > span {
     flex: 1 1 auto;
     text-align: center;
     color: #fff;
-    padding: 19px 18px 20px;
+    padding: 22px 20px 23px;
     transition: all ease .3s;
-    border-bottom: 3px solid;
     cursor: pointer;
-}
-md-toolbar-row > nav > span:hover {
-    border-bottom: 3px solid #333;
-    transition: all ease .3s;
+    font-size: .8em;
 }
 .md-primary,
 [md-fab].md-primary,
@@ -1556,18 +1549,17 @@ md-toolbar-row > nav > span:hover {
 [md-raised-button].md-primary:hover {
     color: #fff;
 }
+md-toolbar button {
+    margin-right: 10px;
+}
 md-toolbar.navbar {
-    background-color: rgba(245, 134, 52, 1);
+    background-color: rgba(245, 134, 52, .9);
 }
 md-toolbar-row > div > md-toolbar-row > span {
     font-size: .8em;
 }
-md-toolbar-row > nav > span > a {
-    color: rgba(255,255,255,1);
-    font-size: .9em;
-}
-md-toolbar-row > nav > span > a:hover,
-md-toolbar-row > nav > span > a:focus {
+md-toolbar-row > nav > span > a,
+md-toolbar-row > nav > span > a:hover {
     color: rgba(255,255,255,1);
 }
 md-toolbar-row > div > md-toolbar-row > span > i.material-icons {
@@ -1588,4 +1580,7 @@ header {
 }
 .toolbar-text {
     margin-left: 10px;
+}
+sebm-google-map.sebm-google-map-container {
+    min-height: 350px;
 }

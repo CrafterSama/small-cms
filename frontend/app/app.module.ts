@@ -4,6 +4,8 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 //import { MockBackend, MockConnection } from '@angular/http/testing';
 //import { BaseRequestOptions } from '@angular/http';
 
@@ -26,6 +28,7 @@ import { FooterComponent } from './common/index';
 @NgModule({
     imports: [
         MaterialModule.forRoot(),
+        AgmCoreModule.forRoot({ apiKey: 'AIzaSyBtgMIZjc_tXj4a4yqGJRpaq2xTWHPfTZE' }),
         BrowserModule,
         FormsModule,
         HttpModule,
