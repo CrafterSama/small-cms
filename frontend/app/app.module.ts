@@ -28,7 +28,8 @@ import { FooterComponent } from './common/index';
 @NgModule({
     imports: [
         MaterialModule.forRoot(),
-        AgmCoreModule.forRoot({ apiKey: 'AIzaSyBtgMIZjc_tXj4a4yqGJRpaq2xTWHPfTZE' }),
+        //AgmCoreModule.forRoot({ apiKey: 'AIzaSyBtgMIZjc_tXj4a4yqGJRpaq2xTWHPfTZE' }),
+        AgmCoreModule.forRoot(),
         BrowserModule,
         FormsModule,
         HttpModule,

@@ -1504,7 +1504,7 @@ md-toolbar-row .container {
     padding: 3%;
 }
 
-.top-banner > .logo > img {
+.top-banner > .logo > .container > img {
     color: #000;
     position: relative;
     width: 35%;
