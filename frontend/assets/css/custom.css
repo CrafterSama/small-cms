@@ -1507,7 +1507,7 @@ md-toolbar-row .container {
 .top-banner > .logo > .container > img {
     color: #000;
     position: relative;
-    width: 35%;
+    width: 55%;
 }
 
 .logo > h5.small {
@@ -1515,10 +1515,18 @@ md-toolbar-row .container {
     text-shadow: 0px 0px 4px #000;
     font-size: 1em;
 }
+.contact-data {
+    margin: 25px 0px;
+}
+
 
 /** Toolbar Layout */
 md-toolbar.md-primary {
     background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+[md-raised-button].md-primary,
+[md-raised-button].md-primary:hover {
     color: #fff;
 }
 md-toolbar-row > nav.container {
