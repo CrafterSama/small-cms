@@ -5,6 +5,8 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { PostComponent } from './post/index';
 import { AboutComponent } from './about/index';
+import { TeamComponent } from './team/index';
+import { BlogComponent } from './blog/index';
 import { ContactComponent } from './contact/index';
 import { DashboardComponent } from './dashboard/index';
 import { AuthGuard } from './_guards/index';
@@ -13,6 +15,8 @@ const appRoutes: Routes = [
 
 	/** Normal sections */
     { path: '', component: HomeComponent },
+    { path: 'nosotros', component: TeamComponent },
+    { path: 'blog', component: BlogComponent },
     { path: 'acerca-de', component: AboutComponent },
     { path: 'contactenos', component: ContactComponent },
 

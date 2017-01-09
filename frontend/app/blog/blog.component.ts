@@ -1,4 +1,4 @@
-﻿import { ComponentFactoryResolver,
+import { ComponentFactoryResolver,
     ViewChild, ViewContainerRef, Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -13,16 +13,13 @@ import { FooterComponent } from '../common/index';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'home.component.html'
+    templateUrl: 'blog.component.html'
 })
 
-export class HomeComponent implements OnInit {
+export class BlogComponent implements OnInit {
     currentUser: User;
     posts: Post[] = [];
     users: User[] = [];
-
-    /*@ViewChild('header', {read: ViewContainerRef}) header: ViewContainerRef;
-    @ViewChild('footer', {read: ViewContainerRef}) footer: ViewContainerRef;*/
 
     constructor(
         private postService: PostService,
@@ -30,29 +27,18 @@ export class HomeComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        /*private compFactoryResolver: ComponentFactoryResolver,*/
         private alertService: AlertService) {
-
-        /*this.name = 'softars-cms'*/
 
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
 
-    /*addComponents() {
-
-      let compFactory: ComponentFactory;
-
-      compFactory = this.compFactoryResolver.resolveComponentFactory(HeaderComponent);
-      this.header.createComponent(compFactory);
-
-
-      compFactory = this.compFactoryResolver.resolveComponentFactory(FooterComponent);
-      this.footer.createComponent(compFactory);
-    }*/
-
     ngOnInit() {
 
+        this.loadAllPosts();
+    }
 
+    private loadAllPosts() {
+        this.postService.getAll().subscribe(posts => { this.posts = posts; });
     }
 
 }

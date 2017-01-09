@@ -20,6 +20,8 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
 import { AboutComponent } from './about/index';
+import { TeamComponent } from './team/index';
+import { BlogComponent } from './blog/index';
 import { ContactComponent } from './contact/index';
 import { PostComponent } from './post/index';
 import { HeaderComponent } from './common/index';
@@ -43,6 +45,8 @@ import { FooterComponent } from './common/index';
         RegisterComponent,
         DashboardComponent,
         AboutComponent,
+        TeamComponent,
+        BlogComponent,
         ContactComponent,
         HeaderComponent,
         FooterComponent,

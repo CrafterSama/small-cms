@@ -14,7 +14,7 @@ import { AlertService, UserService } from '../_services/index';
 export class ContactComponent {
     loading = false;
 	lat: number = 10.200905;
-	lng: number = -71.314232; 
+	lng: number = -71.314232;
 
 	constructor (private alertService: AlertService) {}
 
@@ -26,7 +26,7 @@ export class ContactComponent {
     }
 
     contactMessage() {
-    	loading = true;
+    	this.loading = true;
     }
 
 }
