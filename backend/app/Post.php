@@ -14,5 +14,10 @@ class Post extends Model
 
     protected $fillable = [
         'name', 'content', 'media', 'slug', 'updated_by', 'user_id'
-    ];
+ 	];
+
+ 	public function users()
+    {
+        return $this->hasOne('App\User', 'id', 'user_id');
+    }
 }

@@ -1522,7 +1522,9 @@ md-toolbar-row .container {
 .post-title {
     font-weight: bold;
     letter-spacing: 2px;
-    color: #999;
+    color: rgb(245, 134, 52);
+    text-shadow: 2px 2px 0px #333;
+    font-size: 2.2em;
 }
 
 /** Toolbar Layout */
@@ -1534,7 +1536,8 @@ md-toolbar.md-primary {
 [md-raised-button].md-primary:hover {
     color: #fff;
 }
-md-toolbar-row > nav.container {
+md-toolbar-row > nav.container,
+.flex-layout {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1553,6 +1556,30 @@ md-toolbar-row > nav > span {
     cursor: pointer;
     font-size: .8em;
 }
+.flex-item {
+    flex: 1 1 auto;
+    max-height: 50px;
+    text-align: center;
+    max-width: 100px;
+    margin: 25px 5px;
+}
+
+div.flex-item > div {
+    width: 100%;
+    height: 100%;
+}
+
+div.flex-item > div > img {
+    max-width: 70px;
+}
+
+div.flex-item > div > img.unity,
+div.flex-item > div > img.laravel,
+div.flex-item > div > img.extjs {
+    position: relative;
+    top: 50%;
+}
+
 .md-primary,
 [md-fab].md-primary,
 [md-mini-fab].md-primary,
@@ -1606,6 +1633,7 @@ sebm-google-map.sebm-google-map-container {
 
 div.home-box > .material-icons {
     font-size: 4.5em;
+    color: rgb(245, 134, 52);
 }
 
 .second-section {
