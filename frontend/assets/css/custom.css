@@ -1524,7 +1524,7 @@ md-toolbar-row .container {
     letter-spacing: 2px;
     color: rgb(245, 134, 52);
     text-shadow: 2px 2px 0px #333;
-    font-size: 2.2em;
+    font-size: 2.3em;
 }
 
 /** Toolbar Layout */
@@ -1571,13 +1571,19 @@ div.flex-item > div {
 
 div.flex-item > div > img {
     max-width: 70px;
+    max-height: 50px;
+    margin: auto;
 }
 
 div.flex-item > div > img.unity,
-div.flex-item > div > img.laravel,
+div.flex-item > div > img.meteor,
 div.flex-item > div > img.extjs {
     position: relative;
-    top: 50%;
+    top: 25%;
+}
+div.flex-item > div > img.sass,
+div.flex-item > div > img.laravel {
+    position: relative;
 }
 
 .md-primary,
