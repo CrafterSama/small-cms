@@ -1700,6 +1700,7 @@ h2.description{
     -webkit-transition: all 0.5s ease-in-out 0s;
     -moz-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
+    border-radius: 50%;
 }
 .img-box ul i{
     font-size: 20px;
@@ -1709,7 +1710,7 @@ h2.description{
     width: 30px;
     height: 30px;
     text-align: center;
-    border: 1px solid #FF8A00;
+    /*border: 1px solid #FF8A00;*/
     margin: 2px;
     padding: 5px;
     display: inline-block;
@@ -1719,6 +1720,7 @@ h2.description{
 }
 .img-box:hover:after{
     opacity: 1;
+    border-radius: 50%;
 }
 .img-box:hover ul{
     opacity: 1;
@@ -1729,11 +1731,11 @@ h2.description{
     transition: all 0.3s ease-in-out 0s;
 }
 .img-box a:hover li{
-    border-color: #fff;
-    color: #88C425;
+    /*border-color: #fff;*/
+    color: #FF8A00;
 }
 a{
-    color:#88C425;
+    color:#FF8A00;
 }
 a:hover{
     text-decoration:none;
