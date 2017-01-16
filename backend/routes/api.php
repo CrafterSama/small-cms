@@ -40,6 +40,7 @@ $api->version('v1', function (Router $api) {
     $api->group(['middleware' => 'cors'], function ($api) {
         $api->get('posts', 'App\Api\V1\Controllers\PostController@index');
         $api->get('posts/{id}', 'App\Api\V1\Controllers\PostController@show');
+        $api->post('contact', 'App\Api\V1\Controllers\MailController@SendContactForm');
     });
 
     $api->group(['middleware' => 'api.auth', 'cors'], function ($api) {

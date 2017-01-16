@@ -20,5 +20,5 @@ class MailController extends Controller
             'status' => 'ok',
             'message' => 'Mensaje Enviado, gracias por contactarnos'
         ], 201);
-	}
+	}    
 }
