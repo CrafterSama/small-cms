@@ -1476,17 +1476,17 @@ md-toolbar-row .container {
     background-color: rgba(0,0,0,0.5);
 }
 .loading div {
-    padding: 10px;
+    /*padding: 10px;
     border-radius: 5px;
-    color: #000;
-    background-color: #F3F3F3;
+    color: #000;*/
+    /*background-color: #F3F3F3;*/
     position:relative;
     top:42%;
     left: 47%;
-    width: 75px;
+    width: 100px;
 }
 .loading div img {
-    max-width: 150px;
+    max-width: 100px;
 }
 
 .top-banner {
