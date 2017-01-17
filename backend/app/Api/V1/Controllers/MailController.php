@@ -1,21 +1,35 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Api\V1\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Tymon\JWTAuth\JWTAuth;
+use App\Http\Controllers\Controller;
+use App\Api\V1\Requests\LoginRequest;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class MailController extends Controller
 {
 	public function SendContactForm(Request $request)
     {
-    	$data = $request->all();
-		\Mail::send('emails.contact',
-        ['data' => $data], function($mail) use($data){
-	        $mail->from($data['email'], $data['name']);
-            $mail->subject($data['subject']);
-            $mail->to('info@softars.com', 'Admin');
-	        $mail->message($data['message']);
-	    });
+               //guarda el valor de los campos enviados desde el form en un array
+       $data = $request->all();
+
+       //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
+       \Mail::send('emails.contact', $data, function($message) use ($request)
+       {
+           //remitente
+           $message->from($request->email, $request->name);
+
+           //asunto
+           $message->subject($request->subject);
+
+           //receptor
+           $message->to('info@softars.com', 'Admin');
+
+       });
         return response()->json([
             'status' => 'ok',
             'message' => 'Mensaje Enviado, gracias por contactarnos'
