@@ -15,6 +15,7 @@ export class ContactComponent {
     loading = false;
 	lat: number = 10.200905;
 	lng: number = -71.314232;
+    CONTACT_URL: string = 'http://localhost:8000/api/contact';
 
 	constructor (private alertService: AlertService) {}
 
@@ -25,8 +26,17 @@ export class ContactComponent {
 
     }
 
-    contactMessage() {
+    login( name: string, email: string, subject: string, body: string ) {
     	this.loading = true;
+        return this.http.post(this.CONTACT_URL, { name: name, email: email, subject: subject, body: body } )
+            .map((response: Response) => {
+                // Estatus Ok
+                let response = response.json();
+                if (response.status == 'ok') {
+                    // Mensaje de Alerta con confirmacion del mismo
+                    this.alertService.success('Mensaje Enviado', true);
+                }
+            });
     }
 
 }
