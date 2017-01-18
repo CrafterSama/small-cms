@@ -14,7 +14,7 @@ import { routing }        from './app.routing';
 
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
-import { AlertService, AuthenticationService, UserService, PostService } from './_services/index';
+import { AlertService, AuthenticationService, UserService, PostService, ContactService } from './_services/index';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
@@ -56,6 +56,7 @@ import { FooterComponent } from './common/index';
         AuthGuard,
         AlertService,
         AuthenticationService,
+        ContactService,
         UserService,
         PostService
 

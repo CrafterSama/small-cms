@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
 
         //this.isSpecial = 'true';
-//
+
         // reset login status
         this.authenticationService.logout();
 

@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'mail.softars.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 25),
+    'port' => env('MAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@softars.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto@softars.com'),
         'name' => env('MAIL_FROM_NAME', 'Admin'),
     ],
 
@@ -84,7 +84,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'postmaster@sandbox1c6412de48864f86af3111244e3050b3.mailgun.org'),
+    'username' => env('MAIL_USERNAME', 'info@softars.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +97,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD', '40bcc3e92460f80672efeb6866d8cbaf'),
+    'password' => env('MAIL_PASSWORD', '+S0ft4rs'),
 
     /*
     |--------------------------------------------------------------------------
