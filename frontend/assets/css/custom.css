@@ -1660,12 +1660,12 @@ h2.description{
 .profile{
     margin-top: 25px;
 }
-.profile h1{
+.profile h2{
     font-weight: normal;
     font-size: 20px;
     margin:10px 0 0 0;
 }
-.profile h2{
+.profile h3{
     font-size: 14px;
     font-weight: lighter;
     margin-top: 5px;
@@ -1674,6 +1674,7 @@ h2.description{
     opacity: 1;
     display: block;
     position: relative;
+    margin-bottom: 45px;
 }
 .profile .img-box:after{
     content:"";
@@ -1705,6 +1706,7 @@ h2.description{
 .img-box ul i{
     font-size: 20px;
     letter-spacing: 10px;
+    text-shadow: 1px 1px 2px #333;
 }
 .img-box ul li{
     width: 30px;
@@ -1714,9 +1716,15 @@ h2.description{
     margin: 2px;
     padding: 5px;
     display: inline-block;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 .img-box a{
-    color:#fff;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    color: rgba(0,0,0,0);
 }
 .img-box:hover:after{
     opacity: 1;
@@ -1725,6 +1733,11 @@ h2.description{
 .img-box:hover ul{
     opacity: 1;
 }
+.img-box:hover ul li {
+    /*border-color: #fff;*/
+    margin-top: 60px;
+    color: rgba(0,0,0,1);
+}
 .img-box ul a{
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
@@ -1732,6 +1745,7 @@ h2.description{
 }
 .img-box a:hover li{
     /*border-color: #fff;*/
+    margin-top: 35px;
     color: #FF8A00;
 }
 a{
