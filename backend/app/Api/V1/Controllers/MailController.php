@@ -12,24 +12,28 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class MailController extends Controller
 {
-	public function SendContactForm(Request $request)
+	public function SendContactForm (Request $request)
     {
-               //guarda el valor de los campos enviados desde el form en un array
-       $data = $request->all();
+    //guarda el valor de los campos enviados desde el form en un array
+    $data = $request->all();
 
-       //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
-       \Mail::send('emails.contact', $data, function($message) use ($request)
-       {
-           //remitente
-           $message->from($request->email, $request->name);
+    //dd($request->all());
 
-           //asunto
-           $message->subject($request->subject);
+    //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
+    \Mail::send('emails.contact', $data, function($message) use ($data)
+    {
+        //remitente
+        $message->from($data['email'], $data['name']);
 
-           //receptor
-           $message->to('info@softars.com', 'Admin');
+        //asunto
+        $message->subject($data['subject']);
 
-       });
+        //receptor
+        $message->to('info@softars.com', 'Admin');
+
+        //dd($message);
+
+    });
         return response()->json([
             'status' => 'ok',
             'message' => 'Mensaje Enviado, gracias por contactarnos'
