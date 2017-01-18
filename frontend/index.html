@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <title>SoftArs - Empresa dedicada a la creación de Software as a Service y Videojuegos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- application css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/palette.css" rel="stylesheet" />
+
+    <!-- polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+</head>
+<body>
+    <app>
+        <div class="loading">
+            <div class="text-center">
+                <img src="assets/images/loading-one.svg" />
+            </div>
+        </div>
+    </app>
+</body>
+</html>
