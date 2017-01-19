@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 
+import { ToastrService } from 'toastr-ng2';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 
@@ -11,7 +13,8 @@ export class ContactService {
 
     constructor(
         private http: Http,
-        private alertService: AlertService) { }
+        private alertService: AlertService,
+        private toastrService: ToastrService) { }
 
     CONTACT_URL: string = 'http://localhost:8000/api/contact';
 
@@ -22,7 +25,7 @@ export class ContactService {
                 let res = response.json();
                 if (res.status == 'ok') {
                     // Mensaje de Alerta con confirmacion del mismo
-                    this.alertService.success(res.message, true);
+                    this.toastrService.success(res.message, '¡Envio Exitoso!');
                 }
             });
     }

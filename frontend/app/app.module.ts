@@ -6,6 +6,8 @@ import { MaterialModule } from '@angular/material';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
+import { ToastrModule } from 'toastr-ng2';
+
 //import { MockBackend, MockConnection } from '@angular/http/testing';
 //import { BaseRequestOptions } from '@angular/http';
 
@@ -32,6 +34,7 @@ import { FooterComponent } from './common/index';
         MaterialModule.forRoot(),
         AgmCoreModule.forRoot({ apiKey: 'AIzaSyBtgMIZjc_tXj4a4yqGJRpaq2xTWHPfTZE' }),
         //AgmCoreModule.forRoot(),
+        ToastrModule.forRoot(), // ToastrModule added
         BrowserModule,
         FormsModule,
         HttpModule,
