@@ -1,45 +1,58 @@
-﻿<md-sidenav-layout>
-	<!-- Header -->
-	<header [hidden]="isHidden()" class="header">
-	    <md-toolbar color="primary">
-	        <div class="container">
-	            <md-toolbar-row>
-	                <span><i class="material-icons">mail_outline</i>info@softars.com</span>
-	                <span> <i class="material-icons">phone</i>+58 265 000 00 00</span>
-	                <span class="spacer"></span>
-	                <button md-raised-button color="primary" routerLink="contactenos">Contáctenos</button>
-	            </md-toolbar-row>
+<!-- Header -->
+<header [hidden]="isHidden()" class="container-full">
+	<nav class="nav navbar navbar-inverse info-navbar" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="container">
+			<div class="navbar-header">
+				<span class="navbar-text"><i class="material-icons">mail_outline</i>info@softars.com</span>
+				<span class="navbar-text"><i class="material-icons">phone</i>+58 265 000 00 00</span>
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-element">
+					<button md-raised-button color="primary" routerLink="contactenos">Contáctenos</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+    <div class="top-banner">
+        <div class="logo">
+    		<div class="container">
+	            <img src="assets/images/logo.png" alt="Logo" />
+	            <h5>Software as a Service y Videojuegos</h5>
 	        </div>
-	    </md-toolbar>
-	    <div class="top-banner">
-	        <div class="logo">
-	    		<div class="container">
-		            <img src="assets/images/logo.png" alt="Logo" />
-		            <h5>Software as a Service y Videojuegos</h5>
-		        </div>
-		    </div>
-	        <md-toolbar class="navbar">
-	            <nav class="container">
-	                <span routerLink=""><a>Inicio</a></span>
-	                <span routerLink="nosotros"><a>Nosotros</a></span>
-	                <!-- span routerLink="portafolio"><a>Portafolio</a></span -->
-	                <span routerLink="acerca-de"><a>Acerca de</a></span>
-	                <span routerLink="contactenos"><a>Contáctenos</a></span>
-	            </nav>
-	        </md-toolbar>
 	    </div>
-	</header>
-	<!-- main app container -->
-	<div class="container">
-		<alert class="text-center"></alert>
-		<router-outlet></router-outlet>
-	</div>
-	<!-- credits -->
-	<footer [hidden]="isHidden()">
-	    <div class="container text-center">
-	        <p>
-	        {{ currentDate.getFullYear() }} &copy; Copyright SoftArs CMS  |  Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a>
-	        </p>
-	    </div>
-	</footer>
-</md-sidenav-layout>
+	    <div class="navbar navbar-default navbar-static-top">
+	        <div class="container">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav">
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	            </div>
+	            <div class="collapse navbar-collapse main-nav">
+	                <ul class="nav nav-pills nav-justified">
+	                    <li routerLink=""><a>Inicio</a></li>
+	                    <li routerLink="nosotros"><a>Nosotros</a></li>
+	                    <!-- li routerLink="portafolio"><a>Portafolio</a></li -->
+	                    <li routerLink="acerca-de"><a>Acerca de</a></li>
+	                    <li routerLink="contactenos"><a>Contáctenos</a></li>
+	                </ul>
+	            </div>
+	        </div>
+    	</div>
+    </div>
+</header>
+<!-- main app container -->
+<div class="container-full">
+	<alert class="text-center"></alert>
+	<router-outlet></router-outlet>
+</div>
+<!-- credits -->
+<footer [hidden]="isHidden()" class="container-full">
+    <div class="container text-center">
+        <p>
+        {{ currentDate.getFullYear() }} &copy; Copyright SoftArs CMS  |  Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a>
+        </p>
+    </div>
+</footer>

@@ -1,4 +1,4 @@
-<div class="col-lg-12">
+<div class="container">
     <h2 class="description">{{title}}</h2>
     <div class="col-md-6">
         <div [innerHTML]="content" class="contact-data"></div>
@@ -34,8 +34,6 @@
         </form>
     </div>
     <div class="col-md-6">
-        <sebm-google-map [latitude]="lat" [longitude]="lng">
-            <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-        </sebm-google-map>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1167.429710009394!2d-71.31478565629943!3d10.20095967339246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89d1a088191e13%3A0x735827ba402e8a02!2sSoftArs+Office!5e0!3m2!1ses!2sve!4v1484864685652" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 </div>

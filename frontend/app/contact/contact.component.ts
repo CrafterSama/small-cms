@@ -16,6 +16,7 @@ import { AlertService, UserService, ContactService } from '../_services/index';
 export class ContactComponent {
     model: any = {};
     loading = false;
+    mapTitle: string = 'Map Address';
 	lat: number = 10.200905;
 	lng: number = -71.314232;
     returnUrl: string;
