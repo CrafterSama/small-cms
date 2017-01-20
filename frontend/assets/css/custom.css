@@ -1622,9 +1622,15 @@ address {
 }
 .nav-pills > li {
   float: left;
+  cursor: pointer;
 }
-.nav-pills > li > a {
-  border-radius: 4px;
+.nav-pills > li > a,
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+  /*border-radius: 4px;*/
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
 }
 .nav-pills > li + li {
   margin-left: 2px;
@@ -1633,7 +1639,7 @@ address {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #337ab7;
+  background-color: #ff9900;
 }
 .nav-stacked > li {
   float: none;
@@ -2046,7 +2052,7 @@ address {
   }
 }
 .navbar-default {
-  background-color: rgba(245, 134, 52, 1);
+  background-color: rgba(245, 134, 52, .9);
   border-color: #ff9900;
 }
 .navbar-default .navbar-brand {
@@ -2580,12 +2586,49 @@ h2.description{
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
-.img-box a{
+.img-box a {
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
     color: rgba(0,0,0,0);
+    position: absolute;
+    top: -30px;
+    left: 60px;
 }
+.img-box:hover a:nth-child(1) {
+    margin-top: 65px;
+    left: 5px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.img-box:hover a:nth-child(2) {
+    -webkit-transition: all 0.3s ease-in-out 0.2s;
+    -moz-transition: all 0.3s ease-in-out 0.2s;
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.img-box:hover a:last-child {
+    margin-top: 65px;
+    left: 115px;
+    -webkit-transition: all 0.3s ease-in-out 0.4s;
+    -moz-transition: all 0.3s ease-in-out 0.4s;
+    transition: all 0.3s ease-in-out 0.4s;
+}
+/*.img-box a:nth-child(1) {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.img-box a:nth-child(2) {
+    -webkit-transition: all 0.3s ease-in-out 0.2s;
+    -moz-transition: all 0.3s ease-in-out 0.2s;
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.img-box a:last-child {
+    -webkit-transition: all 0.3s ease-in-out 0.4s;
+    -moz-transition: all 0.3s ease-in-out 0.4s;
+    transition: all 0.3s ease-in-out 0.4s;
+}*/
 .img-box:hover:after{
     opacity: 1;
     border-radius: 50%;
@@ -2595,17 +2638,12 @@ h2.description{
 }
 .img-box:hover ul li {
     /*border-color: #fff;*/
-    margin-top: 60px;
     color: rgba(0,0,0,1);
 }
-.img-box ul a{
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-.img-box a:hover li{
+
+.img-box:hover a {
     /*border-color: #fff;*/
-    margin-top: 35px;
+    margin-top: 80px;
     color: #FF8A00;
 }
 a{
