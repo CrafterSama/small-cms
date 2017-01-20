@@ -1519,7 +1519,7 @@ address {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 15px 15px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -2008,9 +2008,9 @@ address {
   margin-bottom: 10px;
 }
 .navbar-text {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 3px;
+  margin-top: 13px;
+  margin-bottom: 12px;
+  padding: 2px;
 }
 .navbar-header .navbar-text {
     color: #fff;
@@ -2018,7 +2018,7 @@ address {
 .navbar-text > .material-icons {
     font-size: 17px;
     position: relative;
-    margin: 0 10px;
+    margin: 0 15px;
     padding-top: 5px;
     top: 3px;
     color: rgb(245, 134, 52);
@@ -2046,8 +2046,8 @@ address {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: rgba(245, 134, 52, 1);
+  border-color: #ff9900;
 }
 .navbar-default .navbar-brand {
   color: #777777;
