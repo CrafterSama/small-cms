@@ -1,12 +1,12 @@
 ﻿import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
-
 import { ToastrModule } from 'toastr-ng2';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
 
 //import { MockBackend, MockConnection } from '@angular/http/testing';
 //import { BaseRequestOptions } from '@angular/http';
@@ -30,11 +30,19 @@ import { HeaderComponent } from './common/index';
 import { FooterComponent } from './common/index';
 
 @NgModule({
+    exports: [
+        TranslateModule
+    ],
     imports: [
         MaterialModule.forRoot(),
         AgmCoreModule.forRoot({ apiKey: 'AIzaSyBtgMIZjc_tXj4a4yqGJRpaq2xTWHPfTZE' }),
         //AgmCoreModule.forRoot(),
         ToastrModule.forRoot(), // ToastrModule added
+        TranslateModule.forRoot({
+            provide: TranslateLoader,
+            useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+            deps: [Http]
+        }), // ToastrModule added
         BrowserModule,
         FormsModule,
         HttpModule,
@@ -64,6 +72,7 @@ import { FooterComponent } from './common/index';
         PostService
 
     ],
+
     /*entryComponents: [ ModalContact ],*/
     bootstrap: [ AppComponent ],
     entryComponents: [HeaderComponent, FooterComponent ]

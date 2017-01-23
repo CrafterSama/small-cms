@@ -1,34 +1,34 @@
 <div class="container">
-    <h2 class="description">{{title}}</h2>
+    <h2 class="description">{{ 'contact.title' | translate}}</h2>
     <div class="col-md-6">
-        <div [innerHTML]="content" class="contact-data"></div>
+        <div class="contact-data" [innerHTML]="'contact.content' | translate"></div>
         <form name="form" (ngSubmit)="f.form.valid && contact()" #f="ngForm" novalidate>
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
                 <md-input-container class="full-width">
-                    <input md-input type="text" name="name" placeholder="Name" required [(ngModel)]="model.name" #name="ngModel" />
+                    <input md-input type="text" name="name" placeholder="{{ 'form.name' | translate }}" required [(ngModel)]="model.name" #name="ngModel" />
                 </md-input-container>
-                <div *ngIf="f.submitted && !name.valid" class="help-block">El nombre es Requerido</div>
+                <div *ngIf="f.submitted && !name.valid" class="help-block">{{ "error.name" | translate }}</div>
             </div>
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
                 <md-input-container class="full-width">
-                    <input md-input type="text" name="email" placeholder="Email" required [(ngModel)]="model.email" #email="ngModel" />
+                    <input md-input type="text" name="email" placeholder="{{ 'form.email' | translate }}" required [(ngModel)]="model.email" #email="ngModel" />
                 </md-input-container>
-                <div *ngIf="f.submitted && !email.valid" class="help-block">El email es Requerido</div>
+                <div *ngIf="f.submitted && !email.valid" class="help-block">{{ "error.email" | translate }}</div>
             </div>
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !subject.valid }">
                 <md-input-container class="full-width">
-                    <input md-input type="subject" name="subject" placeholder="Asunto" required [(ngModel)]="model.subject" #subject="ngModel" />
+                    <input md-input type="subject" name="subject" placeholder="{{ 'form.subject' | translate }}" required [(ngModel)]="model.subject" #subject="ngModel" />
                 </md-input-container>
-                <div *ngIf="f.submitted && !subject.valid" class="help-block">El asunto es Requerido</div>
+                <div *ngIf="f.submitted && !subject.valid" class="help-block">{{ "error.subject" | translate }}</div>
             </div>
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !body.valid }">
                 <md-input-container class="full-width">
-                    <textarea md-input name="body" placeholder="Mensaje" rows="7" required [(ngModel)]="model.body" #body="ngModel" ></textarea>
+                    <textarea md-input name="body" placeholder="{{ 'form.body' | translate }}" rows="7" required [(ngModel)]="model.body" #body="ngModel" ></textarea>
                 </md-input-container>
-                <div *ngIf="f.submitted && !body.valid" class="help-block">El Mensaje es Requerido</div>
+                <div *ngIf="f.submitted && !body.valid" class="help-block">{{ "error.message" | translate }}</div>
             </div>
             <div class="form-group">
-                <button [disabled]="loading" md-raised-button color="primary">Enviar</button>
+                <button [disabled]="loading" md-raised-button color="primary">{{ "button.send" | translate  }}</button>
                 <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
             </div>
         </form>

@@ -9,7 +9,10 @@
 			</div>
 			<div class="navbar-right">
 				<div class="navbar-element">
-					<button md-raised-button color="primary" routerLink="contactenos">Contáctenos</button>
+					<span>
+						<a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a>
+					</span>
+					<button md-raised-button color="primary" routerLink="contactenos">{{ "contact-us" | translate }}</button>
 				</div>
 			</div>
 		</div>
@@ -18,7 +21,7 @@
         <div class="logo">
     		<div class="container">
 	            <img src="assets/images/logo.png" alt="Logo" />
-	            <h5>Software as a Service y Videojuegos</h5>
+	            <h5>{{ "sub-title" | translate }}</h5>
 	        </div>
 	    </div>
 	    <div class="navbar navbar-default">
@@ -32,11 +35,11 @@
 	            </div>
 	            <div class="collapse navbar-collapse" id="main-nav">
 	                <ul class="nav nav-pills nav-justified">
-	                    <li routerLink=""><a>Inicio</a></li>
-	                    <li routerLink="nosotros"><a>Nosotros</a></li>
-	                    <!-- li routerLink="portafolio"><a>Portafolio</a></li -->
-	                    <li routerLink="acerca-de"><a>Acerca de</a></li>
-	                    <li routerLink="contactenos"><a>Contáctenos</a></li>
+	                    <li routerLink=""><a>{{ "home" | translate }}</a></li>
+	                    <li routerLink="nosotros"><a>{{ "the-team" | translate }}</a></li>
+	                    <!-- li routerLink="portafolio"><a>{{ "portfolio" | translate }}</a></li -->
+	                    <li routerLink="acerca-de"><a>{{ "about-us" | translate }}</a></li>
+	                    <li routerLink="contactenos"><a>{{ "contact-us" | translate }}</a></li>
 	                </ul>
 	            </div>
 	        </div>

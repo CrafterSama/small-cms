@@ -1713,6 +1713,18 @@ address {
 .navbar-element {
     padding: 10px 0px;
 }
+.navbar-element > span {
+    margin: 0 15px 0 5px;
+}
+.navbar-element > span > a.link,
+.navbar-element > span > a.link:focus {
+    cursor: pointer;
+    font-size: .7em;
+    color: rgba(245, 134, 52, 1);
+}
+.navbar-element > span > a.link:hover {
+    color: rgba(255, 255, 255, 1);
+}
 @media (min-width: 768px) {
   .navbar {
     /*border-radius: 4px;*/
@@ -2444,6 +2456,7 @@ div.flex-item > div > img.laravel {
 md-toolbar button {
     margin-right: 10px;
 }
+
 md-toolbar.navbar {
     background-color: rgba(245, 134, 52, .9);
 }
@@ -2534,7 +2547,7 @@ h2.description{
     opacity: 1;
     display: block;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 .profile .img-box:after{
     content:"";

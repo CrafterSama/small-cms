@@ -28,7 +28,8 @@
             // other libraries
             'rxjs': 'npm:rxjs',
             'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js',
-            'toastr-ng2': 'node_modules/toastr-ng2/toastr.umd.js'
+            'toastr-ng2': 'node_modules/toastr-ng2/toastr.umd.js',
+            'ng2-translate': 'node_modules/ng2-translate/bundles/ng2-translate.umd.js'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -37,6 +38,9 @@
                 defaultExtension: 'js'
             },
             rxjs: {
+                defaultExtension: 'js'
+            },
+            'ng2-translate' : {
                 defaultExtension: 'js'
             }
         }
