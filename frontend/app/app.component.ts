@@ -9,14 +9,14 @@ import { TranslateService } from 'ng2-translate';
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 	currentDate = new Date();
 	location: Location;
 	constructor	(
         location: Location,
         private translate: TranslateService) {
             translate.addLangs(['en', 'es']);
-            let language = window.navigator.userLanguage || window.navigator.language;
+            let language = window.navigator.language;
             let localLang = window.localStorage.getItem('SoftArsLanguage');
             if(localLang == null) {
                 if (language == 'en-US') {
