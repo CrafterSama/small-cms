@@ -7,6 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ToastrModule } from 'toastr-ng2';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
+import { CollapseModule } from 'ng2-bootstrap';
 
 //import { MockBackend, MockConnection } from '@angular/http/testing';
 //import { BaseRequestOptions } from '@angular/http';
@@ -43,6 +44,7 @@ import { FooterComponent } from './common/index';
             useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
             deps: [Http]
         }), // ToastrModule added
+        CollapseModule.forRoot(),
         BrowserModule,
         FormsModule,
         HttpModule,

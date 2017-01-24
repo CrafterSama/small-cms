@@ -35,18 +35,21 @@
 		"name" : "Nombre",
 		"email" : "Correo Electronico",
 		"subject" : "Asunto",
-		"body" : "Mensaje"
+		"body" : "Mensaje",
+		"password" : "Contraseña"
 	},
 	"error" : {
 		"name" : "El nombre es Requerido",
 		"email" : "El correo electronico es Requerido",
 		"subject" : "El asunto es Requerido",
-		"message" : "El mensaje es Requerido"
+		"message" : "El mensaje es Requerido",
+		"password" : "El password es Requerido"
 	},
     "button": {
     	"send" : "Enviar",
     	"contact" : "Contáctenos",
     	"login" : "Iniciar Sesión",
-    	"register" : "Registrarse"
+    	"register" : "Registrarse",
+		"cancel" : "Cancelar"
     }
 }

@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { AlertService, AuthenticationService } from '../_services/index';
 
+import { ToastrService } from 'toastr-ng2';
+
 @Component({
     moduleId: module.id,
     templateUrl: 'login.component.html'
@@ -17,7 +19,8 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private alertService: AlertService) { }
+        private alertService: AlertService,
+        private toastrService: ToastrService) { }
 
     ngOnInit() {
 
@@ -36,10 +39,11 @@ export class LoginComponent implements OnInit {
         this.authenticationService.login(this.model.email, this.model.password)
             .subscribe(
                 data => {
+                    this.toastrService.success('Welcome back');
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
-                    this.alertService.error(error);
+                    this.toastrService.error(error);
                     this.loading = false;
                 });
     }

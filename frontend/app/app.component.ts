@@ -12,6 +12,14 @@ import { TranslateService } from 'ng2-translate';
 export class AppComponent {
 	currentDate = new Date();
 	location: Location;
+    public isCollapsed:boolean = true;
+    public collapsed(event:any):void {
+        // console.log(event);
+    }
+    public expanded(event:any):void {
+        // console.log(event);
+    }
+
 	constructor	(
         location: Location,
         private translate: TranslateService) {
@@ -31,7 +39,7 @@ export class AppComponent {
             }
             this.location = location;
         }
-
+    
     changeLang(lang: string) {
         this.translate.use(lang);
         window.localStorage.setItem('SoftArsLanguage', lang);

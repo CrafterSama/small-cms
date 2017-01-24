@@ -35,17 +35,20 @@
 		"name" : "Name",
 		"email" : "Email",
 		"subject" : "Subject",
-		"body" : "Message"
+		"body" : "Message",
+		"password" : "Password"
 	},
 	"error" : {
 		"name" : "The name field is required",
 		"email" : "The email field is required",
 		"subject" : "The subject field is required",
-		"message" : "The message field is required"
+		"message" : "The message field is required",
+		"password" : "The password field is required"
 	},
     "button": {
     	"send" : "Send",
     	"login" : "Login",
-    	"register" : "Register"
+    	"register" : "Register",
+		"cancel" : "Cancel"
     }
 }
