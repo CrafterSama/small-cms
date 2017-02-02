@@ -26,7 +26,7 @@ export class RegisterComponent {
             .subscribe(
                 data => {
                     // set success message and pass true paramater to persist the message after redirecting to the login page
-                    this.toastrService.success(data, true);
+                    this.toastrService.success(data);
                     this.router.navigate(['/login']);
                 },
                 error => {
