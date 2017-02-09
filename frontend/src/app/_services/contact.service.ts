@@ -16,7 +16,7 @@ export class ContactService {
         private alertService: AlertService,
         private toastrService: ToastrService) { }
 
-    CONTACT_URL: string = 'http://localhost:8000/api/contact';
+    CONTACT_URL: string = 'http://api.softars.com/api/contact';
 
     contact( name: string, email: string, subject: string, body: string ) {
         return this.http.post(this.CONTACT_URL, { name: name, email: email, subject: subject, body: body } )

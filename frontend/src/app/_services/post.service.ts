@@ -8,27 +8,27 @@ export class PostService {
     constructor(private http: Http) { }
 
     refresh() {
-        return this.http.get('http://localhost:8000/api/refresh', this.jwt()).map((response: Response) => response.json());
+        return this.http.get('http://api.softars.com/api/refresh', this.jwt()).map((response: Response) => response.json());
     }
 
     getAll() {
-        return this.http.get('http://localhost:8000/api/posts'/*, this.jwt()*/).map((response: Response) => response.json());
+        return this.http.get('http://api.softars.com/api/posts'/*, this.jwt()*/).map((response: Response) => response.json());
     }
 
     getById(id: number) {
-        return this.http.get('http://localhost:8000/api/posts/' + id/*, this.jwt()*/).map((response: Response) => response.json());
+        return this.http.get('http://api.softars.com/api/posts/' + id/*, this.jwt()*/).map((response: Response) => response.json());
     }
 
     create(post: Post) {
-        return this.http.post('http://localhost:8000/api/posts/', post, this.jwt()).map((response: Response) => response.json());
+        return this.http.post('http://api.softars.com/api/posts/', post, this.jwt()).map((response: Response) => response.json());
     }
 
     update(post: Post) {
-        return this.http.put('http://localhost:8000/api/posts/', post, this.jwt()).map((response: Response) => response.json());
+        return this.http.put('http://api.softars.com/api/posts/', post, this.jwt()).map((response: Response) => response.json());
     }
 
     delete(id: number) {
-        return this.http.delete('http://localhost:8000/api/posts/' + id, this.jwt()).map((response: Response) => response.json());
+        return this.http.delete('http://api.softars.com/api/posts/' + id, this.jwt()).map((response: Response) => response.json());
     }
 
     // private helper methods

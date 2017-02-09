@@ -1,55 +1,55 @@
 {
-    "home" : "Inicio",
-    "about-us" : "Acerca de",
-    "contact-us" : "Contáctenos",
-    "the-team" : "El Equipo",
-    "portfolio" : "Portafolio",
-    "sub-title" : "Software como servicio y Videojuegos",
-    "page" : {
-    	"web" : "Aplicaciones Web",
-    	"mobile" : "Tecnología Movil",
-    	"vg" : "Videojuegos",
-    	"sub-title-1" : "Desarrollamos con tecnologias de Ultima Generación"
+    "home": "Inicio",
+    "about-us": "Acerca de",
+    "contact-us": "Contáctenos",
+    "the-team": "El Equipo",
+    "portfolio": "Portafolio",
+    "sub-title": "Software como servicio y Videojuegos",
+    "page": {
+        "web": "Aplicaciones Web",
+        "mobile": "Tecnología Movil",
+        "vg": "Videojuegos",
+        "sub-title-1": "Desarrollamos con tecnologias de Ultima Generación"
     },
-    "team" : {
-    	"title" : "Nuestro Equipo",
-    	"adviser" : "Asesor Técnico",
-    	"coord" : "Coordinador",
-    	"fullstack" : "Desarrollador Fullstack",
-    	"web-developer" : "Desarrollador Web",
-    	"web-design" : "Diseñador Web",
-    	"illustrator" : "Ilustrador",
-    	"3d-designer" : "Generalista 3D"
+    "team": {
+        "title": "Nuestro Equipo",
+        "adviser": "Asesor Técnico",
+        "coord": "Coordinador",
+        "fullstack": "Desarrollador Fullstack",
+        "web-developer": "Desarrollador Web",
+        "web-design": "Diseñador Web",
+        "illustrator": "Ilustrador & Artista 2D",
+        "3d-designer": "Generalista 3D"
     },
-    "about" : {
-    	"title" : "Acerca de",
-    	"content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan ipsum nisl, at accumsan nisl placerat non. Mauris porttitor convallis pharetra. Sed commodo malesuada dolor ac interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc interdum nulla auctor nulla volutpat, vitae fringilla velit blandit. Maecenas est quam, imperdiet in diam non, rutrum tempus sem. Cras volutpat mi vitae malesuada pulvinar. Nulla placerat mauris nec rutrum aliquet. Nunc vulputate, elit non pretium consectetur, ligula justo egestas ex, vel scelerisque erat nisl at libero. Etiam quis ultricies ante. Sed lorem justo, tristique et egestas in, imperdiet eu leo. In urna purus, dapibus ut bibendum in, cursus eget justo. Vestibulum sit amet ante congue, venenatis velit in, suscipit nibh. Pellentesque sodales nunc purus, sit amet varius lacus placerat vel. Curabitur suscipit nunc nec elit finibus, nec vulputate risus elementum.</p><p>Integer sed ante iaculis, hendrerit lacus sit amet, porta nisl. Vivamus aliquet dolor a nibh efficitur aliquet. Donec ac risus sagittis, porta sem in, lacinia nunc. Maecenas eget risus rutrum, porta nunc eget, consequat ex. Nam eu efficitur tortor. Nam at hendrerit ante. Integer hendrerit felis tortor, sed luctus purus tempor vel. Cras scelerisque dolor in urna tempus posuere. Phasellus id vestibulum purus, luctus rhoncus ante.</p>"
+    "about": {
+        "title": "Acerca de",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan ipsum nisl, at accumsan nisl placerat non. Mauris porttitor convallis pharetra. Sed commodo malesuada dolor ac interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc interdum nulla auctor nulla volutpat, vitae fringilla velit blandit. Maecenas est quam, imperdiet in diam non, rutrum tempus sem. Cras volutpat mi vitae malesuada pulvinar. Nulla placerat mauris nec rutrum aliquet. Nunc vulputate, elit non pretium consectetur, ligula justo egestas ex, vel scelerisque erat nisl at libero. Etiam quis ultricies ante. Sed lorem justo, tristique et egestas in, imperdiet eu leo. In urna purus, dapibus ut bibendum in, cursus eget justo. Vestibulum sit amet ante congue, venenatis velit in, suscipit nibh. Pellentesque sodales nunc purus, sit amet varius lacus placerat vel. Curabitur suscipit nunc nec elit finibus, nec vulputate risus elementum.</p><p>Integer sed ante iaculis, hendrerit lacus sit amet, porta nisl. Vivamus aliquet dolor a nibh efficitur aliquet. Donec ac risus sagittis, porta sem in, lacinia nunc. Maecenas eget risus rutrum, porta nunc eget, consequat ex. Nam eu efficitur tortor. Nam at hendrerit ante. Integer hendrerit felis tortor, sed luctus purus tempor vel. Cras scelerisque dolor in urna tempus posuere. Phasellus id vestibulum purus, luctus rhoncus ante.</p>"
     },
-    "contact" : {
-    	"title" : "Contáctenos",
-    	"content" : "<div class='contact-data'><strong>Dirección:</strong><address>Calle Venecia, Softars Office, Ciudad Ojeda, Edo. Zulia, Venezuela.</address><strong>Teléfono: </strong><span>+58 265 631 67 15</span></div>",
-    	"address" : "Address",
-    	"phone" : "Phone"
+    "contact": {
+        "title": "Contáctenos",
+        "content": "<div class='contact-data'><strong>Dirección:</strong><address>Calle Venecia, Softars Office, Ciudad Ojeda, Edo. Zulia, Venezuela.</address><strong>Teléfono: </strong><span>+58 265 631 67 15</span></div>",
+        "address": "Address",
+        "phone": "Phone"
     },
-    "form" : {
-		"name" : "Nombre",
-		"email" : "Correo Electronico",
-		"subject" : "Asunto",
-		"body" : "Mensaje",
-		"password" : "Contraseña"
-	},
-	"error" : {
-		"name" : "El nombre es Requerido",
-		"email" : "El correo electronico es Requerido",
-		"subject" : "El asunto es Requerido",
-		"message" : "El mensaje es Requerido",
-		"password" : "El password es Requerido"
-	},
+    "form": {
+        "name": "Nombre",
+        "email": "Correo Electronico",
+        "subject": "Asunto",
+        "body": "Mensaje",
+        "password": "Contraseña"
+    },
+    "error": {
+        "name": "El nombre es Requerido",
+        "email": "El correo electronico es Requerido",
+        "subject": "El asunto es Requerido",
+        "message": "El mensaje es Requerido",
+        "password": "El password es Requerido"
+    },
     "button": {
-    	"send" : "Enviar",
-    	"contact" : "Contáctenos",
-    	"login" : "Iniciar Sesión",
-    	"register" : "Registrarse",
-		"cancel" : "Cancelar"
+        "send": "Enviar",
+        "contact": "Contáctenos",
+        "login": "Iniciar Sesión",
+        "register": "Registrarse",
+        "cancel": "Cancelar"
     }
 }

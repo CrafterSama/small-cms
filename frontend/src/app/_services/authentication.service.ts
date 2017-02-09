@@ -9,7 +9,7 @@ export class AuthenticationService {
 
     constructor(private http: Http) { }
 
-    LOGIN_URL: string = 'http://localhost:8000/api/auth/login';
+    LOGIN_URL: string = 'http://api.softars.com/api/auth/login';
 
     login( email: string, password: string ) {
         return this.http.post(this.LOGIN_URL, { email: email, password: password } )
