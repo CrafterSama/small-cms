@@ -5,6 +5,9 @@ import { AlertService, AuthenticationService } from '../_services/index';
 
 import { ToastrService } from 'toastr-ng2';
 
+import { User } from '../_models/index';
+import { UserService } from '../_services/index';
+
 @Component({
     moduleId: module.id,
     templateUrl: 'login.component.html'
@@ -14,13 +17,19 @@ export class LoginComponent implements OnInit {
     model: any = {};
     loading = false;
     returnUrl: string;
+    currentUser: User;
+    users: User[] = [];
 
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
         private alertService: AlertService,
-        private toastrService: ToastrService) { }
+        private toastrService: ToastrService,
+        private userService: UserService) 
+    { 
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    }
 
     ngOnInit() {
 
@@ -30,7 +39,7 @@ export class LoginComponent implements OnInit {
         this.authenticationService.logout();
 
         // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '';
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
     }
 

@@ -4,21 +4,51 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
             <div class="navbar-header">
-                <span class="navbar-text"><i class="material-icons">mail_outline</i><a class="link" href="mailto:info@softars.com">info@softars.com</a></span>
-                <span class="navbar-text"><i class="material-icons">phone</i><a class="link" href="tel:+582656316715">+58 265 631 6715</a></span>
+                <span class="navbar-text">
+                    <i class="material-icons hidden-sm hidden-xs">mail_outline</i>
+                    <span class="material-icons hidden-lg hidden-md"></span>
+                <a class="link" href="mailto:info@softars.com">
+                    <span class="hidden-sm hidden-xs">info@softars.com</span>
+                    <span class="hidden-lg hidden-md"><i class="fa fa-envelope"></i></span>
+                </a>
+                </span>
+                <span class="navbar-text">
+                    <i class="material-icons hidden-sm hidden-xs">phone</i>
+                    <span class="material-icons hidden-lg hidden-md"></span>
+                <a class="link" href="tel:+582656316715">
+                    <span class="hidden-sm hidden-xs">+58 265 631 6715</span>
+                    <span class="hidden-lg hidden-md"><i class="fa fa-phone"></i></span>
+                </a>
+                </span>
                 <span class="pull-right navbar-element hidden-md hidden-lg">
-                    <span>
-                        <a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a>
-                    </span>
-                <button md-raised-button color="primary" routerLink="contactenos">{{ "contact-us" | translate }}</button>
+                    <span><a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a></span>
+                <button md-raised-button color="primary" routerLink="/contactenos"><i class="fa fa-comments"></i></button>
+                <button *ngIf="!logStatus()" md-raised-button color="primary" routerLink="/login"><i class="fa fa-sign-in"></i></button>
+                <span *ngIf="logStatus()" class="dropdown" dropdown>
+                    <a href="#" class="dropdown-toggle link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" dropdown-open>{{ currentUser.user.name }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a [routerLink]="['/login']">{{ "button.logout" | translate }}</a></li>
+                </ul>
+                </span>
                 </span>
             </div>
-            <div class="navbar-right hidden-sm hidden-xs">
+            <div class="navbar-right pull-right hidden-sm hidden-xs">
                 <div class="navbar-element">
                     <span>
 						<a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a>
 					</span>
-                    <button md-raised-button color="primary" routerLink="contactenos">{{ "contact-us" | translate }}</button>
+                    <button md-raised-button color="primary" [routerLink]="['/contactenos']">{{ "contact-us" | translate }}</button>
+                    <button *ngIf="!logStatus()" md-raised-button color="primary" [routerLink]="['/login']">{{ "button.login" | translate }}</button>
+                    <span *ngIf="logStatus()" class="dropdown" dropdown>
+                        <a href="#" class="dropdown-toggle link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" dropdown-open>{{ currentUser.user.name }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a [routerLink]="['/dashboard']"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a [routerLink]="['/login']"><i class="fa fa-sign-out"></i> {{ "button.logout" | translate }}</a></li>
+                    </ul>
+                    </span>
                 </div>
             </div>
         </div>
@@ -41,11 +71,11 @@
                 </div>
                 <div (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed" class="navbar-collapse collapse">
                     <ul class="nav nav-pills nav-justified">
-                        <li routerLink=""><a>{{ "home" | translate }}</a></li>
-                        <li routerLink="nosotros"><a>{{ "the-team" | translate }}</a></li>
-                        <!-- li routerLink="portafolio"><a>{{ "portfolio" | translate }}</a></li -->
-                        <li routerLink="acerca-de"><a>{{ "about-us" | translate }}</a></li>
-                        <li routerLink="contactenos"><a>{{ "contact-us" | translate }}</a></li>
+                        <li [routerLink]="['/home']" routerLinkActive="active"><a>{{ "home" | translate }}</a></li>
+                        <li [routerLink]="['/nosotros']" routerLinkActive="active"><a>{{ "the-team" | translate }}</a></li>
+                        <!-- li [routerLink]="['/portafolio'] routerLinkActive="active""><a>{{ "portfolio" | translate }}</a></li -->
+                        <li [routerLink]="['/acerca-de']" routerLinkActive="active"><a>{{ "about-us" | translate }}</a></li>
+                        <li [routerLink]="['/contactenos']" routerLinkActive="active"><a>{{ "contact-us" | translate }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,15 +83,15 @@
     </div>
 </header>
 <!-- main app container -->
-<div class="container-full">
-    <alert class="text-center"></alert>
+<div class="container-full ">
+    <alert class="text-center "></alert>
     <router-outlet></router-outlet>
 </div>
 <!-- credits -->
-<footer [hidden]="isHidden()" class="container-full">
-    <div class="container text-center">
+<footer [hidden]="isHidden() " class="container-full ">
+    <div class="container text-center ">
         <p>
-            {{ currentDate.getFullYear() }} &copy; Copyright SoftArs CMS | Powered by <a href="http://softars.com" target="_top">SoftArs, Inc.</a>
+            {{ currentDate.getFullYear() }} &copy; Copyright SoftArs CMS | Powered by <a href="http://softars.com " target="_top ">SoftArs, Inc.</a>
         </p>
     </div>
 </footer>

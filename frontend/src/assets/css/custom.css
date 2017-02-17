@@ -1975,7 +1975,9 @@ address {
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
     color: #ffffff;
-    background-color: #ff9900;
+    border-bottom: 3px solid #cdcdcd;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
 }
 
 .nav-stacked>li {
@@ -2093,9 +2095,18 @@ address {
     }
 }
 
+@media (min-width: 521px) and (max-width: 767px) {
+    .top-banner>.logo>.container>img {
+        width: 65%;
+    }
+}
+
 @media (max-width: 520px) {
     button.md-primary {
         display: none;
+    }
+    .top-banner>.logo>.container>img {
+        width: 85%;
     }
 }
 
@@ -2134,6 +2145,11 @@ address {
     .navbar-fixed-bottom .navbar-collapse {
         padding-left: 0;
         padding-right: 0;
+    }
+    .top-banner>.logo>.container>img {
+        color: #000;
+        position: relative;
+        width: 55%;
     }
 }
 
@@ -2237,7 +2253,7 @@ address {
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
-    border: 1px solid transparent;
+    box-shadow: 0px 0px 3px #333;
     border-radius: 4px;
 }
 
@@ -2483,7 +2499,7 @@ address {
 
 .navbar-default {
     background-color: rgba(245, 134, 52, .9);
-    border-color: #ff9900;
+    border: none;
 }
 
 .navbar-default .navbar-brand {
@@ -2524,14 +2540,15 @@ address {
     background-color: transparent;
 }
 
-.navbar-default .navbar-toggle {
+
+/*.navbar-default .navbar-toggle {
     border-color: #dddddd;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: #dddddd;
-}
+}*/
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #888888;
@@ -2820,11 +2837,12 @@ md-toolbar-row .container {
     padding: 3%;
 }
 
-.top-banner>.logo>.container>img {
+
+/*.top-banner>.logo>.container>img {
     color: #000;
     position: relative;
     width: 55%;
-}
+}*/
 
 .logo>h5.small {
     color: #fff;
@@ -2870,8 +2888,8 @@ md-toolbar-row>nav.container,
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: flex-end;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 md-toolbar-row>nav>span {
@@ -3000,6 +3018,7 @@ div.home-box>.material-icons {
     margin: 45px 0px;
     padding: 35px 0px;
     background-color: #fafafa;
+    box-shadow: 0px 0px 3px #333;
 }
 
 
@@ -3055,7 +3074,7 @@ h2.description {
 .img-box,
 .img-box img {
     margin: auto;
-    max-width: 150px;
+    max-width: 120px;
 }
 
 .img-box ul {

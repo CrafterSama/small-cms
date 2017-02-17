@@ -14,7 +14,8 @@ import { AuthGuard } from './_guards/index';
 const appRoutes: Routes = [
 
 	/** Normal sections */
-    { path: '', component: HomeComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
     { path: 'nosotros', component: TeamComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'acerca-de', component: AboutComponent },
@@ -22,14 +23,14 @@ const appRoutes: Routes = [
 
     /** Login and registration */
     { path: 'login', component: LoginComponent },
-    { path: 'registro', component: RegisterComponent },
+    { path: 'register', component: RegisterComponent },
 
     /** Login required sections */
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'dashboard/posts', component: PostComponent, canActivate: [AuthGuard] },
 
     /** Otherwise redirect to home */
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const routing = RouterModule.forRoot(appRoutes,  { useHash: true });
