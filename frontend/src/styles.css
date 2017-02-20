@@ -3009,9 +3009,9 @@ sebm-google-map.sebm-google-map-container {
     transition: all 0.1s ease-in-out 0s;
 }
 
-div.home-box>.material-icons {
-    font-size: 4.5em;
-    color: rgb(245, 134, 52);
+div.home-box>i.fa {
+    font-size: 4em;
+    color: rgba(245, 134, 52, 1);
 }
 
 .home-second-section {
