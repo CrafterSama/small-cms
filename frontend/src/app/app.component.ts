@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 
 import { TranslateService } from 'ng2-translate';
-import { DropdownModule } from "ngx-dropdown";
 
 import { User } from './_models/index';
 import { UserService } from './_services/index';
@@ -14,6 +13,7 @@ import { UserService } from './_services/index';
 })
 
 export class AppComponent {
+    isVisible : boolean = false;
 	currentDate = new Date();
     currentUser: User;
     users: User[] = [];
@@ -25,6 +25,12 @@ export class AppComponent {
     }
     public expanded(event:any):void {
         // console.log(event);
+    }
+    public items:string[] = ['The first choice!',
+    'And another choice for you.', 'but wait! A third!'];
+ 
+    public toggled(open:boolean):void {
+        console.log('Dropdown is now: ', open);
     }
 
 	constructor	(

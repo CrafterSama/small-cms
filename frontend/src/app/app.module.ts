@@ -7,8 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ToastrModule } from 'toastr-ng2';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
-import { CollapseModule } from 'ng2-bootstrap';
-import { DropdownModule } from "ngx-dropdown";
+import { CollapseModule, DropdownModule } from 'ng2-bootstrap';
 
 //import { MockBackend, MockConnection } from '@angular/http/testing';
 //import { BaseRequestOptions } from '@angular/http';
@@ -31,6 +30,7 @@ import { PostComponent } from './post/index';
 import { HeaderComponent } from './common/index';
 import { FooterComponent } from './common/index';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FaderComponent } from './app.fader.component';
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -51,6 +51,7 @@ export function createTranslateLoader(http: Http) {
             deps: [Http]
         }), // ToastrModule added*/
         CollapseModule.forRoot(),
+        DropdownModule.forRoot(),
         BrowserModule,
         FormsModule,
         HttpModule,
@@ -71,7 +72,8 @@ export function createTranslateLoader(http: Http) {
         HeaderComponent,
         FooterComponent,
         PostComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        FaderComponent
     ],
     providers: [
         AuthGuard,

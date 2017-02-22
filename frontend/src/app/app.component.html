@@ -21,17 +21,21 @@
                 </a>
                 </span>
                 <span class="pull-right navbar-element hidden-md hidden-lg">
-                    <span><a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a></span>
-                <button md-raised-button color="primary" routerLink="/contactenos"><i class="fa fa-comments"></i></button>
-                <button *ngIf="!logStatus()" md-raised-button color="primary" routerLink="/login"><i class="fa fa-sign-in"></i></button>
-                <span *ngIf="logStatus()" class="dropdown" dropdown>
-                    <a href="#" class="dropdown-toggle link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" dropdown-open>{{ currentUser.user.name }} <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a [routerLink]="['/login']">{{ "button.logout" | translate }}</a></li>
-                </ul>
-                </span>
+                    <span>
+                        <a class="link" (click)="changeLang('en')">EN</a> | <a class="link" (click)="changeLang('es')">ES</a>
+                    </span>
+                    <button md-raised-button color="primary" routerLink="/contactenos"><i class="fa fa-comments"></i></button>
+                    <button *ngIf="!logStatus()" md-raised-button color="primary" routerLink="/login"><i class="fa fa-sign-in"></i></button>
+                    <span *ngIf="logStatus()" dropdown (onToggle)="toggled($event)">
+                        <a href id="simple-dropdown" class="link" dropdownToggle>
+                            {{ currentUser.user.name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a [routerLink]="['/login']">{{ "button.logout" | translate }}</a></li>
+                        </ul>
+                    </span>
                 </span>
             </div>
             <div class="navbar-right pull-right hidden-sm hidden-xs">
@@ -41,13 +45,15 @@
 					</span>
                     <button md-raised-button color="primary" [routerLink]="['/contactenos']">{{ "contact-us" | translate }}</button>
                     <button *ngIf="!logStatus()" md-raised-button color="primary" [routerLink]="['/login']">{{ "button.login" | translate }}</button>
-                    <span *ngIf="logStatus()" class="dropdown" dropdown>
-                        <a href="#" class="dropdown-toggle link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" dropdown-open>{{ currentUser.user.name }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a [routerLink]="['/dashboard']"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a [routerLink]="['/login']"><i class="fa fa-sign-out"></i> {{ "button.logout" | translate }}</a></li>
-                    </ul>
+                    <span *ngIf="logStatus()" dropdown (onToggle)="toggled($event)">
+                        <a href id="simple-dropdown" class="link" dropdownToggle>
+                            {{ currentUser.user.name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a [routerLink]="['/login']">{{ "button.logout" | translate }}</a></li>
+                        </ul>
                     </span>
                 </div>
             </div>
@@ -83,10 +89,9 @@
     </div>
 </header>
 <!-- main app container -->
-<div class="container-full ">
-    <alert class="text-center "></alert>
-    <router-outlet></router-outlet>
-</div>
+<my-fader [isVisible]="isVisible">
+    
+</my-fader>
 <!-- credits -->
 <footer [hidden]="isHidden() " class="container-full ">
     <div class="container text-center ">
